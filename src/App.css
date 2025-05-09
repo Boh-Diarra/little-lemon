@@ -1,5 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  line-height: 1.5;
+  color: #333333;
+}
+
 .App {
-  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Markazi Text', serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Karla', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Variables globales */
+:root {
+  --primary-color: #495E57;
+  --secondary-color: #F4CE14;
+  --accent-color: #EE9972;
+  --light-color: #EDEFEE;
+  --dark-color: #333333;
 }
 
 .App-logo {

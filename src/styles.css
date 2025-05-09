@@ -58,17 +58,6 @@ body {
     padding: 2rem;
 }
 
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 4rem 2rem;
-    background-color: var(--primary-color);
-    color: var(--light-color);
-}
-
 /* Styles pour le footer */
 .footer {
     grid-area: footer;
@@ -81,6 +70,7 @@ body {
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
+
 }
 
 /* Media Queries pour la responsivité */
@@ -95,10 +85,6 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-    }
-
-    .hero {
-        padding: 2rem 1rem;
     }
 }
 

@@ -1,6 +1,6 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css';
-import { useState } from 'react';
 
 function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,32 +11,48 @@ function Nav() {
 
     return (
         <nav className="navbar">
-            <div className="nav-logo">
-                <img 
-                    src="/images/logo.png" 
-                    alt="Little Lemon Logo" 
-                    width="200" 
-                    height="50"
-                />
-            </div>
-            
-            <button 
-                className={`hamburger ${isMenuOpen ? 'active' : ''}`} 
-                onClick={toggleMenu}
-                aria-label="Toggle menu"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div className="navbar-container">
+                <Link to="/" className="navbar-logo">
+                    <img src="images/logo.png" alt="Little Lemon" />
+                </Link>
+                
+                <div className="menu-icon" onClick={toggleMenu}>
+                    <i className={isMenuOpen ? 'fas fa-times' : 'fas fa-bars'} />
+                </div>
 
-            <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-                <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
-                <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link></li>
-                <li><Link to="/menu" onClick={() => setIsMenuOpen(false)}>Menu</Link></li>
-                <li><Link to="/reservations" onClick={() => setIsMenuOpen(false)}>Reservations</Link></li>
-                <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
-            </ul>
+                <ul className={isMenuOpen ? 'nav-menu active' : 'nav-menu'}>
+                    <li className="nav-item">
+                        <Link to="/" className="nav-link" onClick={toggleMenu}>
+                            Accueil
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/about" className="nav-link" onClick={toggleMenu}>
+                            À propos
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/menu" className="nav-link" onClick={toggleMenu}>
+                            Menu
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/reservations" className="nav-link" onClick={toggleMenu}>
+                            Réservations
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/order-online" className="nav-link" onClick={toggleMenu}>
+                            Commander en ligne
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/login" className="nav-link" onClick={toggleMenu}>
+                            Connexion
+                        </Link>
+                    </li>
+                </ul>
+            </div>
         </nav>
     );
 }
