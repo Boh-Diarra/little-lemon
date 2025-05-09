@@ -75,13 +75,14 @@
         opacity: 1;
         transition: all 0.5s ease;
         background-color: #495E57;
+        z-index: 1000;
     }
 
     .nav-menu.active {
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
-        z-index: 1;
+        z-index: 1001;
     }
 
     .nav-item {
@@ -102,8 +103,17 @@
         top: 0;
         right: 0;
         transform: translate(-100%, 60%);
-        font-size: 1.8rem;
+        font-size: 2.5rem;
         cursor: pointer;
-        color: #EDEFEE;
+        color: #F4CE14 !important;
+        z-index: 2000;
+        background: none;
+        border: none;
     }
+}
+
+.menu-icon i {
+    color: #F4CE14 !important;
+    font-size: 2.5rem;
+    z-index: 2000;
 } 
