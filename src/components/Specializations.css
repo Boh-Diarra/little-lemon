@@ -29,7 +29,8 @@
 }
 
 .menu-button:hover {
-  background-color: #EDEFEE;
+  background-color: var(--primary-color);
+  color: var(--light-color);
   transform: translateY(-2px);
 }
 
