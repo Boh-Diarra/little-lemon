@@ -44,20 +44,22 @@ function CustomersSay() {
   return (
     <section className="testimonials">
       <h2>Ce que nos clients disent</h2>
-      <div className="testimonials-grid">
+      <ul className="testimonials-grid" style={{listStyle: 'none', padding: 0, margin: 0}}>
         {testimonials.map((testimonial) => (
-          <div key={testimonial.id} className="testimonial-card">
-            <div className="testimonial-header">
-              <div className="rating">{renderStars(testimonial.rating)}</div>
-              <div className="customer-info">
-                <img src={testimonial.image} alt={testimonial.name} />
-                <h3>{testimonial.name}</h3>
+          <li key={testimonial.id} className="testimonial-card" style={{marginBottom: '1rem'}}>
+            <article>
+              <div className="testimonial-header">
+                <div className="rating">{renderStars(testimonial.rating)}</div>
+                <div className="customer-info">
+                  <img src={testimonial.image} alt={`Photo de ${testimonial.name}`} />
+                  <h3>{testimonial.name}</h3>
+                </div>
               </div>
-            </div>
-            <p>{testimonial.review}</p>
-          </div>
+              <p>{testimonial.review}</p>
+            </article>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

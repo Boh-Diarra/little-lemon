@@ -79,6 +79,7 @@ function Main() {
                 <section style={{marginTop: '2rem'}}>
                     <h3>Réservations enregistrées</h3>
                     <table style={{width: '100%', borderCollapse: 'collapse'}}>
+                      <caption>Liste des réservations enregistrées</caption>
                         <thead>
                             <tr>
                                 <th style={{border: '1px solid #ccc', padding: '8px'}}>Date</th>

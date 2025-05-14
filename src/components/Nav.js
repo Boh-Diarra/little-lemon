@@ -10,15 +10,20 @@ function Nav() {
     };
 
     return (
-        <nav className="navbar">
+        <nav className="navbar" aria-label="Navigation principale">
             <div className="navbar-container">
                 <Link to="/" className="navbar-logo">
                     <img src="images/logo.png" alt="Little Lemon" />
                 </Link>
                 
-                <div className="menu-icon" onClick={toggleMenu}>
-                    <i className={isMenuOpen ? 'fas fa-times' : 'fas fa-bars'} />
-                </div>
+                <button 
+                  className="menu-icon" 
+                  onClick={toggleMenu} 
+                  aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+                  type="button"
+                >
+                  <i className={isMenuOpen ? 'fas fa-times' : 'fas fa-bars'} aria-hidden="true" />
+                </button>
 
                 <ul className={isMenuOpen ? 'nav-menu active' : 'nav-menu'}>
                     <li className="nav-item">
