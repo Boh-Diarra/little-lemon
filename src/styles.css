@@ -39,8 +39,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: var(--primary-color);
-    color: var(--light-color);
+    background-color: var(--light-color);
+    color: var(--primary-color);
 }
 
 /* Styles pour le header */

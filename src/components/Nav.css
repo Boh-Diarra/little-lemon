@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #495E57;
+    background-color: #EDEFEE;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -45,7 +45,7 @@
 }
 
 .nav-link {
-    color: #EDEFEE;
+    color: #495E57;
     display: flex;
     align-items: center;
     text-decoration: none;
